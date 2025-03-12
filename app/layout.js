@@ -29,20 +29,23 @@ const geistMono = Geist_Mono({
 // }
 
 export const metadata = {
-  title: "My Tailwind Project",
-  description: "Using Jersey 25 font",
+  title: "BlaBlaCoffee - Your NO.1 Choice",
+  description: "The best coffee shop in town",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap"
+        
+        <link 
+          href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" 
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
